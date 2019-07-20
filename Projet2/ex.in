@@ -1,0 +1,12 @@
+var a;
+
+print "Entier? ";
+lire a;
+
+si a - a / 2 * 2 alors
+  print "La valeur entree est impaire\n";
+sinon
+  print "La valeur entree est paire\n";
+finsi;
+
+

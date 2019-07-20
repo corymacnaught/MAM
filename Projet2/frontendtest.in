@@ -1,0 +1,172 @@
+// Test de <
+
+print "Test #01 (";
+si 10 < 12 alors
+  print "<) : OK\n";
+sinon
+  print "<) : BAD\n";
+finsi;
+
+print "Test #02 (";
+si 12 < 10 alors
+  print "<) : BAD\n";
+sinon
+  print "<) : OK\n";
+finsi;
+
+print "Test #03 (";
+si 10 < 10 alors
+  print "<) : BAD\n";
+sinon
+  print "<) : OK\n";
+finsi;
+
+print "Test #04 (";
+si 0 < 0 alors
+  print "<) : BAD\n";
+sinon
+  print "<) : OK\n";
+finsi;
+
+
+// Test de <=
+
+print "Test #05 (";
+si 10 <= 12 alors
+  print "<=): OK\n";
+sinon
+  print "<=): BAD\n";
+finsi;
+
+print "Test #06 (";
+si 12 <= 10 alors
+  print "<=): BAD\n";
+sinon
+  print "<=): OK\n";
+finsi;
+
+print "Test #07 (";
+si 10 <= 10 alors
+  print "<=): OK\n";
+sinon
+  print "<=): BAD\n";
+finsi;
+
+print "Test #08 (";
+si 0 <= 0 alors
+  print "<=): OK\n";
+sinon
+  print "<=): BAD\n";
+finsi;
+
+
+// Test de >
+
+print "Test #09 (";
+si 12 > 10 alors
+  print ">) : OK\n";
+sinon
+  print ">) : BAD\n";
+finsi;
+
+print "Test #10 (";
+si 10 > 12 alors
+  print ">) : BAD\n";
+sinon
+  print ">) : OK\n";
+finsi;
+
+print "Test #11 (";
+si 10 > 10 alors
+  print ">) : BAD\n";
+sinon
+  print ">) : OK\n";
+finsi;
+
+print "Test #12 (";
+si 0 > 0 alors
+  print ">) : BAD\n";
+sinon
+  print ">) : OK\n";
+finsi;
+
+
+// Test de >=
+
+print "Test #13 (";
+si 12 >= 10 alors
+  print ">=): OK\n";
+sinon
+  print ">=): BAD\n";
+finsi;
+
+print "Test #14 (";
+si 10 >= 12 alors
+  print ">=): BAD\n";
+sinon
+  print ">=): OK\n";
+finsi;
+
+print "Test #15 (";
+si 10 >= 10 alors
+  print ">=): OK\n";
+sinon
+  print ">=): BAD\n";
+finsi;
+
+print "Test #16 (";
+si 0 >= 0 alors
+  print ">=): OK\n";
+sinon
+  print ">=): BAD\n";
+finsi;
+
+
+// Test de ==
+
+print "Test #17 (";
+si 10 == 10 alors
+  print "==): OK\n";
+sinon
+  print "==): BAD\n";
+finsi;
+
+print "Test #18 (";
+si 10 == 12 alors
+  print "==): BAD\n";
+sinon
+  print "==): OK\n";
+finsi;
+
+print "Test #19 (";
+si 0 == 0 alors
+  print "==): OK\n";
+sinon
+  print "==): BAD\n";
+finsi;
+
+
+// Test de !=
+
+print "Test #20 (";
+si 10 != 10 alors
+  print "!=): BAD\n";
+sinon
+  print "!=): OK\n";
+finsi;
+
+print "Test #21 (";
+si 10 != 12 alors
+  print "!=): OK\n";
+sinon
+  print "!=): BAD\n";
+finsi;
+
+print "Test #22 (";
+si 0 != 0 alors
+  print "!=): BAD\n";
+sinon
+  print "!=): OK\n";
+finsi;
+
+

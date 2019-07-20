@@ -1,0 +1,41 @@
+var n;
+var d;
+
+// lire de l'ecran la valeur de n
+println "Quelle est la numerateur?";
+print "-->";
+lire n;
+
+// lire de l'ecran la valeur de d
+println "Quelle est la denominateur?";
+print "-->";
+lire d;
+
+var r;
+var decimales;
+var iterations;
+
+r = 1;
+decimale = 0;
+tantque r > 0 faire
+	iterations = 0;
+	tantque n >= d faire
+		n = n - d;
+		iterations = iterations + 1;
+	fintantque;
+
+	r = n;
+	n = n * 10;
+
+	print iterations;
+	si decimales == 0 alors
+		si r > 0 alors
+			print ",";
+		finsi;
+	finsi;
+	decimales = decimales + 1;
+
+	si decimales > 10 alors
+		r = 0;
+	finsi;
+fintantque;

@@ -1,0 +1,414 @@
+	// // Test de <
+	// print "Test #01 (";
+	out,"Test #01 ("
+	// si 10 < 12 alors
+	set,T0,10
+	set,T1,12
+	jz,T1,L1
+	bop,/,T2,T0,T1
+	jnz,T2,L1
+	//   print "<) : OK\n";
+	out,"<) : OK\n"
+	// sinon
+	jmp,L2
+L1:
+	//   print "<) : BAD\n";
+	out,"<) : BAD\n"
+	// finsi;
+L2:
+	// print "Test #02 (";
+	out,"Test #02 ("
+	// si 12 < 10 alors
+	set,T2,12
+	set,T3,10
+	jz,T3,L3
+	bop,/,T4,T2,T3
+	jnz,T4,L3
+	//   print "<) : BAD\n";
+	out,"<) : BAD\n"
+	// sinon
+	jmp,L4
+L3:
+	//   print "<) : OK\n";
+	out,"<) : OK\n"
+	// finsi;
+L4:
+	// print "Test #03 (";
+	out,"Test #03 ("
+	// si 10 < 10 alors
+	set,T4,10
+	set,T5,10
+	jz,T5,L5
+	bop,/,T6,T4,T5
+	jnz,T6,L5
+	//   print "<) : BAD\n";
+	out,"<) : BAD\n"
+	// sinon
+	jmp,L6
+L5:
+	//   print "<) : OK\n";
+	out,"<) : OK\n"
+	// finsi;
+L6:
+	// print "Test #04 (";
+	out,"Test #04 ("
+	// si 0 < 0 alors
+	set,T6,0
+	set,T7,0
+	jz,T7,L7
+	bop,/,T8,T6,T7
+	jnz,T8,L7
+	//   print "<) : BAD\n";
+	out,"<) : BAD\n"
+	// sinon
+	jmp,L8
+L7:
+	//   print "<) : OK\n";
+	out,"<) : OK\n"
+	// finsi;
+L8:
+	// // Test de <=
+	// print "Test #05 (";
+	out,"Test #05 ("
+	// si 10 <= 12 alors
+	set,T8,10
+	set,T9,12
+	jnz,T8,L9
+	bop,-,T10,T8,T9
+	jnz,T10,L11
+	jmp,L10
+L9:
+	bop,/,T10,T9,T8
+	jz,T10,L11
+L10:
+	//   print "<=): OK\n";
+	out,"<=): OK\n"
+	// sinon
+	jmp,L12
+L11:
+	//   print "<=): BAD\n";
+	out,"<=): BAD\n"
+	// finsi;
+L12:
+	// print "Test #06 (";
+	out,"Test #06 ("
+	// si 12 <= 10 alors
+	set,T10,12
+	set,T11,10
+	jnz,T10,L13
+	bop,-,T12,T10,T11
+	jnz,T12,L15
+	jmp,L14
+L13:
+	bop,/,T12,T11,T10
+	jz,T12,L15
+L14:
+	//   print "<=): BAD\n";
+	out,"<=): BAD\n"
+	// sinon
+	jmp,L16
+L15:
+	//   print "<=): OK\n";
+	out,"<=): OK\n"
+	// finsi;
+L16:
+	// print "Test #07 (";
+	out,"Test #07 ("
+	// si 10 <= 10 alors
+	set,T12,10
+	set,T13,10
+	jnz,T12,L17
+	bop,-,T14,T12,T13
+	jnz,T14,L19
+	jmp,L18
+L17:
+	bop,/,T14,T13,T12
+	jz,T14,L19
+L18:
+	//   print "<=): OK\n";
+	out,"<=): OK\n"
+	// sinon
+	jmp,L20
+L19:
+	//   print "<=): BAD\n";
+	out,"<=): BAD\n"
+	// finsi;
+L20:
+	// print "Test #08 (";
+	out,"Test #08 ("
+	// si 0 <= 0 alors
+	set,T14,0
+	set,T15,0
+	jnz,T14,L21
+	bop,-,T16,T14,T15
+	jnz,T16,L23
+	jmp,L22
+L21:
+	bop,/,T16,T15,T14
+	jz,T16,L23
+L22:
+	//   print "<=): OK\n";
+	out,"<=): OK\n"
+	// sinon
+	jmp,L24
+L23:
+	//   print "<=): BAD\n";
+	out,"<=): BAD\n"
+	// finsi;
+L24:
+	// // Test de >
+	// print "Test #09 (";
+	out,"Test #09 ("
+	// si 12 > 10 alors
+	set,T16,12
+	set,T17,10
+	jz,T16,L25
+	bop,/,T18,T17,T16
+	jnz,T18,L25
+	//   print ">) : OK\n";
+	out,">) : OK\n"
+	// sinon
+	jmp,L26
+L25:
+	//   print ">) : BAD\n";
+	out,">) : BAD\n"
+	// finsi;
+L26:
+	// print "Test #10 (";
+	out,"Test #10 ("
+	// si 10 > 12 alors
+	set,T18,10
+	set,T19,12
+	jz,T18,L27
+	bop,/,T20,T19,T18
+	jnz,T20,L27
+	//   print ">) : BAD\n";
+	out,">) : BAD\n"
+	// sinon
+	jmp,L28
+L27:
+	//   print ">) : OK\n";
+	out,">) : OK\n"
+	// finsi;
+L28:
+	// print "Test #11 (";
+	out,"Test #11 ("
+	// si 10 > 10 alors
+	set,T20,10
+	set,T21,10
+	jz,T20,L29
+	bop,/,T22,T21,T20
+	jnz,T22,L29
+	//   print ">) : BAD\n";
+	out,">) : BAD\n"
+	// sinon
+	jmp,L30
+L29:
+	//   print ">) : OK\n";
+	out,">) : OK\n"
+	// finsi;
+L30:
+	// print "Test #12 (";
+	out,"Test #12 ("
+	// si 0 > 0 alors
+	set,T22,0
+	set,T23,0
+	jz,T22,L31
+	bop,/,T24,T23,T22
+	jnz,T24,L31
+	//   print ">) : BAD\n";
+	out,">) : BAD\n"
+	// sinon
+	jmp,L32
+L31:
+	//   print ">) : OK\n";
+	out,">) : OK\n"
+	// finsi;
+L32:
+	// // Test de >=
+	// print "Test #13 (";
+	out,"Test #13 ("
+	// si 12 >= 10 alors
+	set,T24,12
+	set,T25,10
+	jnz,T25,L33
+	bop,-,T26,T24,T25
+	jnz,T26,L35
+	jmp,L34
+L33:
+	bop,/,T26,T24,T25
+	jz,T26,L35
+L34:
+	//   print ">=): OK\n";
+	out,">=): OK\n"
+	// sinon
+	jmp,L36
+L35:
+	//   print ">=): BAD\n";
+	out,">=): BAD\n"
+	// finsi;
+L36:
+	// print "Test #14 (";
+	out,"Test #14 ("
+	// si 10 >= 12 alors
+	set,T26,10
+	set,T27,12
+	jnz,T27,L37
+	bop,-,T28,T26,T27
+	jnz,T28,L39
+	jmp,L38
+L37:
+	bop,/,T28,T26,T27
+	jz,T28,L39
+L38:
+	//   print ">=): BAD\n";
+	out,">=): BAD\n"
+	// sinon
+	jmp,L40
+L39:
+	//   print ">=): OK\n";
+	out,">=): OK\n"
+	// finsi;
+L40:
+	// print "Test #15 (";
+	out,"Test #15 ("
+	// si 10 >= 10 alors
+	set,T28,10
+	set,T29,10
+	jnz,T29,L41
+	bop,-,T30,T28,T29
+	jnz,T30,L43
+	jmp,L42
+L41:
+	bop,/,T30,T28,T29
+	jz,T30,L43
+L42:
+	//   print ">=): OK\n";
+	out,">=): OK\n"
+	// sinon
+	jmp,L44
+L43:
+	//   print ">=): BAD\n";
+	out,">=): BAD\n"
+	// finsi;
+L44:
+	// print "Test #16 (";
+	out,"Test #16 ("
+	// si 0 >= 0 alors
+	set,T30,0
+	set,T31,0
+	jnz,T31,L45
+	bop,-,T32,T30,T31
+	jnz,T32,L47
+	jmp,L46
+L45:
+	bop,/,T32,T30,T31
+	jz,T32,L47
+L46:
+	//   print ">=): OK\n";
+	out,">=): OK\n"
+	// sinon
+	jmp,L48
+L47:
+	//   print ">=): BAD\n";
+	out,">=): BAD\n"
+	// finsi;
+L48:
+	// // Test de ==
+	// print "Test #17 (";
+	out,"Test #17 ("
+	// si 10 == 10 alors
+	set,T32,10
+	set,T33,10
+	bop,-,T34,T32,T33
+	jnz,T34,L49
+	//   print "==): OK\n";
+	out,"==): OK\n"
+	// sinon
+	jmp,L50
+L49:
+	//   print "==): BAD\n";
+	out,"==): BAD\n"
+	// finsi;
+L50:
+	// print "Test #18 (";
+	out,"Test #18 ("
+	// si 10 == 12 alors
+	set,T34,10
+	set,T35,12
+	bop,-,T36,T34,T35
+	jnz,T36,L51
+	//   print "==): BAD\n";
+	out,"==): BAD\n"
+	// sinon
+	jmp,L52
+L51:
+	//   print "==): OK\n";
+	out,"==): OK\n"
+	// finsi;
+L52:
+	// print "Test #19 (";
+	out,"Test #19 ("
+	// si 0 == 0 alors
+	set,T36,0
+	set,T37,0
+	bop,-,T38,T36,T37
+	jnz,T38,L53
+	//   print "==): OK\n";
+	out,"==): OK\n"
+	// sinon
+	jmp,L54
+L53:
+	//   print "==): BAD\n";
+	out,"==): BAD\n"
+	// finsi;
+L54:
+	// // Test de !=
+	// print "Test #20 (";
+	out,"Test #20 ("
+	// si 10 != 10 alors
+	set,T38,10
+	set,T39,10
+	bop,-,T40,T38,T39
+	jz,T40,L55
+	//   print "!=): BAD\n";
+	out,"!=): BAD\n"
+	// sinon
+	jmp,L56
+L55:
+	//   print "!=): OK\n";
+	out,"!=): OK\n"
+	// finsi;
+L56:
+	// print "Test #21 (";
+	out,"Test #21 ("
+	// si 10 != 12 alors
+	set,T40,10
+	set,T41,12
+	bop,-,T42,T40,T41
+	jz,T42,L57
+	//   print "!=): OK\n";
+	out,"!=): OK\n"
+	// sinon
+	jmp,L58
+L57:
+	//   print "!=): BAD\n";
+	out,"!=): BAD\n"
+	// finsi;
+L58:
+	// print "Test #22 (";
+	out,"Test #22 ("
+	// si 0 != 0 alors
+	set,T42,0
+	set,T43,0
+	bop,-,T44,T42,T43
+	jz,T44,L59
+	//   print "!=): BAD\n";
+	out,"!=): BAD\n"
+	// sinon
+	jmp,L60
+L59:
+	//   print "!=): OK\n";
+	out,"!=): OK\n"
+	// finsi;
+L60:

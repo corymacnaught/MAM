@@ -1,0 +1,32 @@
+#!/bin/bash        
+          
+if [ -z "$1" ]; then 
+   echo usage: $0 file
+   exit 1
+ fi
+ 
+SRC=$1
+TMP=${SRC%.*} 
+
+echo "Phase 1 - conversion du code source en code intermédiaire..."
+./frontend < $SRC > $TMP.cta
+if [ "$?" -ne "0" ]; then
+  echo "Compilation interrompue"
+  exit 2
+fi
+
+echo "Phase 2 - conversion du code intermédiaire en code assembleur..."
+./backend < $TMP.cta > $TMP.asm
+if [ "$?" -ne "0" ]; then
+  echo "Compilation interrompue"
+  exit 3
+fi
+rm $TMP.cta
+
+echo "Phase 3 - conversion du code assembleur en code objet..."
+./mamasm $TMP.asm
+rm $TMP.asm
+
+exit 0
+
+
